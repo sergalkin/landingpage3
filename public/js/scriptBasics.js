@@ -8,7 +8,7 @@ var app = new Vue({
         count: 0,
         url: '',
         cleanUrl: '',
-        title: 'Style',
+        title: 'style',
         isRounded: false,
         sizeToggle: false,
         disabled: false,

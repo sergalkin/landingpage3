@@ -2,17 +2,18 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-
+                <line-chart :chart-data="data" :height="100"
+                            :options="{responsive: true, maintainAspectRatio: true}"></line-chart>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    import LineChart from './LineChart'
+    import LineChart from './LineChart.js'
 
     export default {
-        comments: {
+        components: {
             LineChart
         },
         data: function () {
@@ -26,7 +27,7 @@
         methods: {
             update: function () {
                 axios.get('/vue-start/data-chart').then((response) => {
-                    this.urldata = response.data;
+                    this.data = response.data;
                 })
             }
         }

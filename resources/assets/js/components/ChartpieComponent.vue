@@ -2,19 +2,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <line-chart :chart-data="data" :height="100"
-                            :options="{responsive: true, maintainAspectRatio: true}"></line-chart>
+                <pie-chart :chart-data="data" :height="100"
+                            :options="{responsive: true, maintainAspectRatio: true}"></pie-chart>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    import LineChart from './LineChart.js'
+    import PieChart from './PieChart.js'
 
     export default {
         components: {
-            LineChart
+            PieChart
         },
         data: function () {
             return {

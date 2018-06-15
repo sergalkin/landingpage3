@@ -36,7 +36,7 @@
             <button @click="cleanerUrl" class="btn btn-primary"> Clean Url</button>
         </div>
         <div class="col">
-            <h1>@{{ tittle }}</h1>
+            <h1>@{{ title }}</h1>
             <button v-bind:class="[sizeToggle ? 'large' : '', {'rounded': isRounded}]"
                     v-bind:style="styles"
                     v-bind:disabled="disabled">START
@@ -55,5 +55,5 @@
 </body>
 <!-- development version, includes helpful console warnings -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="{{asset('js/script.js')}}"></script>
+<script src="{{asset('/js/scriptBasics.js')}}"></script>
 </html>
