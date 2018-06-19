@@ -68,4 +68,18 @@ class StartController extends Controller
                 ])
         ];
     }
+
+    public function newEvent(\Illuminate\Http\Request $request)
+    {
+        $result = $this->chartData();
+        if ($request->has('label')) {
+            $result['labels'][] = $request->input('label');
+            $result['datasets'][0]['data'][] = (integer)$request->input('sale');
+
+            if (filter_var($request->input('realtime'), FILTER_VALIDATE_BOOLEAN)) {
+                event(new \App\Events\NewEvent($result));
+            }
+        }
+        return $result;
+    }
 }

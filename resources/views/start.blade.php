@@ -72,6 +72,16 @@
             </div>
         </div>
     </div>
+    <div class="row m-2">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body" style="min-height: 720px">
+                    <h2 class="text-center">Realtime chart(line)</h2>
+                    <socket-component></socket-component>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>

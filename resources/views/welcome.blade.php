@@ -90,6 +90,9 @@
             <a href="{{ route('task') }}">task-list</a>
             <a href="{{ route('adaptive') }}">adaptive-menu</a>
             <a href="{{ route('reverse') }}">reverse</a>
+            <a href="{{ route('paginate') }}">paginate</a>
+            <a href="{{ route('pass')}}">pass</a>
+            <a href="{{ route('unlim_load') }}">unlim load</a>
         </div>
 
         <div class="title m-b-md">
