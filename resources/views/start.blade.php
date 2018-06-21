@@ -82,6 +82,31 @@
             </div>
         </div>
     </div>
+    <div class="row m-2">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body" style="min-height: 720px">
+                    <h2 class="text-center">Realtime chart(line)</h2>
+                    <socket-chat-component></socket-chat-component>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m-2">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body" style="min-height: 720px">
+                    <h2 class="text-center">Realtime chart(line)</h2>
+                    <h4 class="text-center">User: {{Auth::user()->email}}</h4>
+                    @if(Auth::check())
+                        <socket-private-component
+                                :users="{{ \App\User::select('email', 'id')->where('id', '!=', Auth::id())->get() }}"
+                                :user="{{Auth::user()}}"></socket-private-component>
+                    @endif
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>
@@ -90,7 +115,15 @@
 </html>
 <script>
     import ChartlineComponent from "../assets/js/components/ChartlineComponent";
+
     export default {
         components: {ChartlineComponent}
+    }
+</script>
+<script>
+    import SocketChatComponent from "../assets/js/components/SocketChatComponent";
+
+    export default {
+        components: {SocketChatComponent}
     }
 </script>

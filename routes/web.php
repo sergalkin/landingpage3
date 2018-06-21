@@ -33,3 +33,9 @@ Route::get('/vue-start/get-json', 'StartController@getJson')->name('getJson');
 Route::get('/vue-start/data-chart', 'StartController@chartData')->name('chartData');
 Route::get('/vue-start/random-chart', 'StartController@randomChart')->name('randomChart');
 Route::get('/vue-start/socket-chart', 'StartController@newEvent')->name('socketChart');
+Route::get('/vue-start/send-message', 'StartController@sendMessage')->name('sendMessage');
+Route::get('/vue-start/send-private-message', 'StartController@sendPrivateMessage')->name('sendPrivateMessage');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
