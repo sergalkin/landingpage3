@@ -36,6 +36,9 @@ Route::get('/vue-start/socket-chart', 'StartController@newEvent')->name('socketC
 Route::get('/vue-start/send-message', 'StartController@sendMessage')->name('sendMessage');
 Route::get('/vue-start/send-private-message', 'StartController@sendPrivateMessage')->name('sendPrivateMessage');
 
+Route::get('/vue-message', 'ChatController@index')->name('chatView');
+Route::post('/vue-message/send','ChatController@sendMessage')->name('sendChatMessage');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

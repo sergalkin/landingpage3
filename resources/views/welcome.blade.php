@@ -101,6 +101,7 @@
 
         <div class="links">
             <a href="{{ route('start') }}">start</a>
+            <a href="{{ route('chatView') }}">chat</a>
         </div>
     </div>
 

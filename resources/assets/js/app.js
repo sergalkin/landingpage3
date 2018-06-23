@@ -24,6 +24,8 @@ Vue.component('chartrandom-component', require('./components/ChartrandomComponen
 Vue.component('socket-component', require('./components/SocketComponent.vue'));
 Vue.component('socket-chat-component', require('./components/SocketChatComponent.vue'));
 Vue.component('socket-private-component', require('./components/SocketPrivateComponent.vue'));
+Vue.component('chat', require('./components/ChatComponent.vue'));
+
 const app = new Vue({
     el: '#app'
 });
